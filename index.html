@@ -1,0 +1,17 @@
+<BODY>
+    <article id="term" />
+
+    <script>
+        fetch('https://foot-connect.microcms.io/api/v1/term/ghm67iq16k',
+            { headers: { "X-MICROCMS-API-KEY": "LBLzWKm7Zwi7zZ7c8UtZsyAbXyGoBjVy1q5V" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("term").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
