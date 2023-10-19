@@ -1,0 +1,17 @@
+<BODY>
+    <article id="privacy" />
+
+    <script>
+        fetch('https://foot-connect.microcms.io/api/v1/privacy/h1vus41gaa3',
+            { headers: { "X-MICROCMS-API-KEY": "LBLzWKm7Zwi7zZ7c8UtZsyAbXyGoBjVy1q5V" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("privacy").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
